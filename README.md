@@ -1,13 +1,19 @@
 Virtual Rocket Launch Timer
+
 Introduction
+
 This Software Requirements Document outlines the specifications for the timer functionality of the rocket launcher user interface (UI), incorporating UDP communication. The timer plays a critical role in ensuring precise synchronization and activation of rocket launch sequences, thereby enhancing operational efficiency and safety measures. This document details the functional and non-functional requirements necessary to achieve robust timer functionality, emphasizing seamless integration with UDP communication protocols to facilitate real-time data exchange between systems. By defining these requirements, we aim to ensure the reliable and accurate performance of the rocket launcher timer within the UI, meeting the operational needs and safety standards of our stakeholders.
+
 Functional Requirements
+
 Countdown Timer Functionality
 1. Start Countdown: The application shall allow the user to start a countdown timer from a specified duration.
 2. Stop Countdown: The application shall allow the user to stop the countdown timer, halting further countdown progress.
 3. Reset Countdown: The application shall allow the user to reset the countdown timer to its initial duration.
 4. Hold Countdown: The application shall allow the user to hold the countdown timer at its current elapsed time and communicate this held time to a client application.
+   
 UDP Communication:
+
 UDP uses IP to get a datagram from one computer to another. UDP gathers data in a UDP packet and adds its own header information to the packet. The steps of establishing a UDP socket communication on the server side are as follows:
 UDP Server :
 1.	Create a UDP socket.
@@ -21,7 +27,8 @@ UDP Client :
 3.	Wait until a response from the server is received.
 4.	Process the reply and go back to step 2, if necessary.
 5.	Close socket descriptor and exit.
- Non-Functional Requirements
+
+Non-Functional Requirements
 - The application shall consist of two main components:
 - Server Side: Implements the countdown timer and UDP server to handle client requests.
 - Client Side: Receives held time updates from the server via UDP.
